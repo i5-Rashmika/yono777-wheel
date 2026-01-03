@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Winners History - Yono 777</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Casino Background / Stage -->
+  <div class="casinoBg">
+    <div class="audience"></div>
+    <div class="lights">
+      <span class="beam b1"></span>
+      <span class="beam b2"></span>
+      <span class="beam b3"></span>
+      <span class="beam b4"></span>
+    </div>
+    <div class="haze"></div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="brand">🏆 <span>Winners History</span></div>
+    <a class="linkBtn" href="index.html">🎡 Back to Wheel</a>
+  </header>
+
+  <!-- Main -->
+  <main class="wrap single">
+    <section class="panel wide">
+      <div class="historyHeader">
+        <div class="hint" style="margin:0;">
+          Total winners: <b id="totalWinners">0</b>
+        </div>
+
+        <div class="row" style="margin-top:0;">
+          <button class="btn" onclick="exportWinners()">Export (.txt)</button>
+          <button class="btn btnDanger" onclick="clearHistory()">Clear History</button>
+        </div>
+      </div>
+
+      <ol id="historyList" class="historyList"></ol>
+
+      <p class="note">
+        Note: Winners are saved in this browser (localStorage). If you open on another device or clear browser data,
+        the history will reset.
+      </p>
+    </section>
+  </main>
+
+  <script src="history.js" defer></script>
+</body>
+</html>
